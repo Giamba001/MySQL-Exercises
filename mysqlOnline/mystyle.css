@@ -1,0 +1,21 @@
+body {
+    background-color:gainsboro;
+}
+
+h1 {
+    font-family:fantasy;
+}
+
+#tracce {
+    font-family:monospace;
+    color:green;
+}
+
+#soluzioni {
+    font-family: monospace;
+    color:green;
+}
+
+.redirect {
+    font-family: fantasy;
+}

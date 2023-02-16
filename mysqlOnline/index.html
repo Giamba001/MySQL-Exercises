@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MySQL ClassicModels</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="mystyle.css">
+
+    <body>
+        <div class="container">
+            <div class="row">
+              <div class="col"><h1 id="tracce"><b>Exercises</b></h1></div>
+              <div class="col"><h1 id="soluzioni"><b>Solutions</b></h1></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>1) SELEZIONARE TUTTI I CAMPI DI TUTTI I RECORD DELLA TABELLA EMPLOYEES.</b></li>
+              </ul></div>
+              <div class="col"><button type="button"  onclick="esercizioUno()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>2) SELEZIONARE TUTTI I CAMPI DI TUTTI I RECORD DELLA TABELLA PRODUCTS.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioDue()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>3) SELEZIONARE TUTTI I CAMPI DI TUTTI I RECORD DELLA TABELLA PRODUCTLINES.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioTre()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>4) SELEZIONARE I CAMPI OFFICECODE, COUNTRY, STATE, CITY, E PHONE DI TUTTI I RECORD DELLA TABELLA OFFICES ORDINATI PER COUNTRY, STATE E CITY.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioQuattro()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>5) SELEZIONARE TUTTI I CAMPI DELLA TABELLA PAYMENTS RELATIVI AI PAGAMENTI CON IMPORTO MAGGIORE DI 10.000.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioCinque()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>6) SELEZIONARE L'ELENCO (SENZA VALORI DUPLICATI) DEI CODICI CLIENTE (CUSTOMERNUMBER) CHE HANNO ALMENO UN ORDINE IN STATO (STATUS) = 'CANCELLED'.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioSei()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>7) SELEZIONARE TUTTI I CAMPI DELLA TABELLA PRODUCTS RELATIVI AI PRODOTTI IL CUI VENDITORE (PRODUCTVENDOR) E' UGUALER A 'EXOTO'.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioSette()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>8) SELEZIONARE TUTTI I CAMPI DELLA TABELLA PRODUCTS RELATIVI AI PRODOTTI AVENTI UN FATTORE DI SCALA (PRODUCTSCALE) UGUALE A 1:18 OPPURE A 1:24.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioOtto()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>9) SELEZIONARE TUTTI I CAMPI DELLA TABELLA PAYMENTS RELATIVI AI PAGAMENTI CON IMPORTO COMPRESO TRA 10.000 E 50.000.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioNove()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>10) SELEZIONARE TUTTI I CAMPI DELLA TABELLA CUSTOMERS IL CUI NOME DEL CUSTOMER(CUSTOMERNAME) CONTIENE LA STRINGA 'CO'.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioDieci()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>11) SELEZIONARE TUTTI I CAMPI RELATIVI AI PRIMI 10 RECORD DELLA TABELLA PAYMENTS.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioUndici()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>12) SELEZIONARE TUTTI I CAMPI RELATIVI AI RECORD DELLA TABELLA OFFICES.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioDodici()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>13) SELEZIONARE IL NUMERO D'ORDINE (ORDERNUMBER) E IL NUMERO TOTALE DELLE RIGHE APPARTENENTI A QUELL'ORDINE.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioTredici()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>    
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>14) Seleziona la descrizione del prodotto, il prezzo medio di vendita (MSRP) 
+                      e la data più recente in cui quel prodotto è stato venduto, di tutti i prodotti che hanno un MRSP maggiore di 100.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioQuattordici()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div> 
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>15) Seleziona I pagamenti dei clienti il cui rappresentante commerciale è il un riporto del dipendente 1088.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioQuindici()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div> 
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>16) Selezionare tutti i campi della tabella offices relativi agli uffici in cui risiedono i dipendenti (employees) che riportano ai dipendenti con employeeNumber 1143 o 1102.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioSedici()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>  
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>17) Selezionare per ogni prodotto il productCode, il productName e una colonna calcolata contenente il valore 'Mezzo di terra' se productLine è uguale a Vintage Cars oppure Trucks and Buses oppure Trains oppure
+                      Motorcycles oppure Classic Cars ,
+                      contenente il valore 'Aereo' se productLine è uguale a 'Planes'
+                      e contenente il valore 'Nave' se productLine è uguale a 'Ships'.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioDiciasette()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div> 
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>18) Per ogni ordine in cui è presente almeno una riga per cui l'importo totale, dato dalla somma della quantità ordinata (quantityOrdered) 
+                      moltiplicato per il prezzo (priceEach), sia maggiore di 7000, selezionare il numero ordine, la data, il numero del cliente e il conteggio del numero di righe d'ordine 
+                      il cui importo totale, dato dalla somma della quantità ordinata (quantityOrdered) moltiplicato per il prezzo (priceEach), sia maggiore di 7000.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioDiciotto()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>19) Selezionare la ragione sociale (customerName) il cognome (contactlastName) e il nome (contactFirstName) dei clienti (tabella customers) e il numero di matricola (employeeNumber), 
+                      il nome (firstName) e il cognome (lastName) del rappresentante commerciale (salesRepEmployeeNumber) dei dipendenti (tabella employees .</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioDiciannove()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>20) Selezionare per ogni ordine avente un numero di righe maggiore di 5, il numero d’ordine (orderNumber) e il numero totale delle righe di quell’ordine (orderDetails).</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioVenti()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>21)  Selezionare il numero 
+                      d’ordine, il numero 
+                      cliente e la data di 
+                      spedizione degli ordini 
+                      che contengono 
+                      almeno un prodotto 
+                      della linea Planes e 
+                      che sono stati spediti 
+                      prima del 15 ottobre 
+                      2015.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioVentuno()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="w-100"></div>
+              <div class="col"><ul>
+                    <li><b>22) Selezionare tutti i 
+                      campi della tabella 
+                      employees relativi ai 
+                      dipendenti che 
+                      risiedono in un ufficio 
+                      del territorio EMEA.</b></li>
+              </ul></div>
+              <div class="col"><button type="button" onclick="esercizioVentidue()" class="btn btn-success">Resolve</button></div>
+            </div>
+          </div>          
+
+
+    <script src="script.js"></script>
+    </body>
+    </head>
+</html>

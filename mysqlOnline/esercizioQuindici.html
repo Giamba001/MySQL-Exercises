@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Solution Ex 15</title>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="mystyle.css">
+    </head>
+
+    <body class="redirect">
+        <img src="images/EsQuindici.png">
+        <p><br><b>SELECT payments.customerNumber, payments.checkNumber, payments.paymentDate, payments.amount 
+            FROM payments, customers, employees
+            WHERE payments.customerNumber = customers.customerNumber AND customers.salesRepEmployeeNumber = employees.employeeNumber
+            AND employees.reportsTo = 1088;</b></br></p>
+        <button type="button" onclick="returnHome()" class="btn btn-link">Home</button>
+
+     <script src="script.js"></script>   
+    </body>
+</html>

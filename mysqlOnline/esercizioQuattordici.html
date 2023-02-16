@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Solution Ex 14</title>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="mystyle.css">
+    </head>
+
+    <body class="redirect">
+        <img src="images/EsQuattordici.png">
+        <p><br><b>SELECT products.productCode, products.MSRP, MAX(orders.orderDate) AS Data
+            FROM products, orders, orderdetails 
+            WHERE products.productCode = orderdetails.productCode and orderdetails.orderNumber = orders.orderNumber
+            GROUP BY products.productCode, products.MSRP
+            HAVING products.MSRP > 100;</b></br></p>
+        <button type="button" onclick="returnHome()" class="btn btn-link">Home</button>
+
+     <script src="script.js"></script>   
+    </body>
+</html>
